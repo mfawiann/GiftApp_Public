@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Rounded Button or Card Background
+  Public-Friendly Notes:
+  - shape is rectangle for simplicity.
+  - solid fill is white (#FFFFFF), can be made semi-transparent if desired.
+  - stroke adds a 2dp colored border (#AB47BC) for visual distinction.
+  - corners are rounded with 8dp radius for modern, smooth look.
+  - This drawable is suitable for buttons, cards, or other UI elements needing a bordered look.
+-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Fill color -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Border / stroke -->
+    <stroke
+        android:width="2dp"
+        android:color="#AB47BC" />
+
+    <!-- Rounded corners -->
+    <corners android:radius="8dp" />
+</shape>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Birthday Letter Layout (Scrollable)
+  Public-Friendly Notes:
+  - ScrollView allows content to be scrollable, useful for long letters/messages.
+  - Background color is light (#FFF8F8) for soft, readable feel.
+  - Padding 24dp provides spacing from screen edges.
+  - LinearLayout arranges children vertically and centers them horizontally.
+  - TextView shows the letter/message content.
+    - fontFamily serif gives a classical, readable style.
+    - letterSpacing and lineSpacingExtra improve readability.
+    - textAlignment center aligns text in the middle.
+    - textColor is purple (#6A1B9A), can be customized.
+    - textSize 18sp is easily readable.
+  - This layout is suitable for birthday letters, messages, or other scrollable text content.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F8"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Replace this with your letter dynamically in code -->
+        <TextView
+            android:id="@+id/textLetter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="serif"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="8dp"
+            android:text="..."
+            android:textAlignment="center"
+            android:textColor="#6A1B9A"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>

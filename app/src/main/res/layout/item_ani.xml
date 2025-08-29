@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Animated Card / Image Item Layout
+  Public-Friendly Notes:
+  - Root element is FrameLayout to allow overlapping child views.
+  - ImageView displays a photo or illustration.
+    - adjustViewBounds="true" ensures the image scales proportionally.
+    - scaleType="centerCrop" fills the container while keeping the aspect ratio.
+    - Background drawable gives a border for styling.
+  - TextView overlays the image at the bottom to show captions or notes.
+    - Semi-transparent black background improves readability on top of image.
+    - Centered text for clean presentation.
+  - Elevation and margin give a card-like, material feel.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:elevation="4dp">
+
+    <!-- Main Image -->
+    <ImageView
+        android:id="@+id/aniImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="Fotoğraf"
+        android:background="@drawable/image_border"
+        android:padding="2dp"/>
+
+    <!-- Overlay Text Box -->
+    <TextView
+        android:id="@+id/aniText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:textColor="#FFFFFF"
+        android:background="#88000000"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:padding="12dp"
+        android:gravity="center" />
+
+</FrameLayout>

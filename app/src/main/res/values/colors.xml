@@ -1,0 +1,7 @@
+<resources>
+    <color name="bgSurface">#000000</color>          <!-- Tam siyah zemin -->
+    <color name="tabIndicator">#BB86FC</color>       <!-- Lila-Mor -->
+    <color name="tabTextInactive">#AAAAAA</color>    <!-- Soluk gri -->
+    <color name="tabTextActive">#BB86FC</color>      <!-- Aktif mor -->
+</resources>
+

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Game Fragment Layout
+  Public-Friendly Notes:
+  - Root is FrameLayout for flexible layering.
+  - Three main UI sections:
+      1) Difficulty buttons (Easy, Medium, Hard) centered at top.
+      2) Score and Timer bar at the top, shows live score and remaining time.
+      3) 3x3 GridLayout in center for game cells (ImageViews), all square and clickable.
+  - Colors and styling match app's purple theme (#6A1B9A).
+  - Layout is simple and readable for all ages.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gameFragmentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Difficulty buttons -->
+    <LinearLayout
+        android:id="@+id/difficultyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/btnEasy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kolay"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6A1B9A"
+            android:layout_margin="8dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btnMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orta"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6A1B9A"
+            android:layout_margin="8dp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btnHard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zor"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6A1B9A"
+            android:layout_margin="8dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <!-- Score + Timer bar -->
+    <LinearLayout
+        android:id="@+id/scoreTimerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puan: 0"
+            android:textColor="#6A1B9A"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <!-- Spacer to push timer to right -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Süre: 20"
+            android:textColor="#6A1B9A"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- 3x3 Game Grid -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true"
+        android:padding="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="40dp">
+
+        <!-- 9 clickable cells for game -->
+        <ImageView android:id="@+id/cell1" style="@style/GameCell"/>
+        <ImageView android:id="@+id/cell2" style="@style/GameCell"/>
+        <ImageView android:id="@+id/cell3" style="@style/GameCell"/>
+        <ImageView android:id="@+id/cell4" style="@style/GameCell"/>
+        <ImageView android:id="@+id/cell5" style="@style/GameCell"/>
+        <ImageView android:id="@+id/cell6" style="@style/GameCell"/>
+        <ImageView android:id="@+id/cell7" style="@style/GameCell"/>
+        <ImageView android:id="@+id/cell8" style="@style/GameCell"/>
+        <ImageView android:id="@+id/cell9" style="@style/GameCell"/>
+
+    </GridLayout>
+</FrameLayout>

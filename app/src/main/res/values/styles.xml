@@ -1,0 +1,35 @@
+<resources>
+
+
+    <style name="Theme.ZumraApp" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/bgSurface</item>
+        <item name="colorPrimary">@color/tabIndicator</item>
+        <item name="colorSecondary">@color/tabIndicator</item>
+    </style>
+
+
+
+    <!-- Sekme yazısı stili -->
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GameImageStyle">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="GameCell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+</resources>

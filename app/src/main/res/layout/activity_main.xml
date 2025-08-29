@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Main Activity Layout
+  Public-Friendly Notes:
+  - Uses LinearLayout vertical to stack ViewPager2 and TabLayout.
+  - ViewPager2 hosts fragments (pages) for your app.
+  - TabLayout provides a navigation tab bar at the bottom.
+  - Colors, padding, and elevation can be customized.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fragment container (ViewPager2) -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:overScrollMode="never"/>
+
+    <!-- TabLayout container -->
+    <LinearLayout
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:paddingBottom="12dp"
+            android:background="#F3E5F5"
+            android:elevation="8dp"
+            app:tabTextAppearance="@style/CustomTabText"
+            app:tabIndicatorColor="#8E24AA"
+            app:tabSelectedTextColor="#8E24AA"
+            app:tabTextColor="#6A1B9A"
+            app:tabGravity="fill"
+            app:tabMode="fixed" />
+    </LinearLayout>
+
+</LinearLayout>

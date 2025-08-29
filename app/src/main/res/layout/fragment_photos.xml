@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  RecyclerView Layout
+  Public-Friendly Notes:
+  - Root element is RecyclerView to display a scrollable list of items.
+  - Each item will be defined separately in an adapter.
+  - Padding added for aesthetic spacing around items.
+  - clipToPadding="false" allows items to scroll into padding area smoothly.
+  - Layout fills the entire screen (match_parent).
+-->
+
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:clipToPadding="false"/>

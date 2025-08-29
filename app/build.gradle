@@ -1,0 +1,78 @@
+plugins {
+    // Apply the Android application plugin
+    alias(libs.plugins.android.application)
+}
+
+android {
+    // Application namespace (also used for R class generation)
+    namespace 'com.example.giftapp_public'
+
+    // Compile against the latest Android SDK
+    compileSdk 35
+
+    defaultConfig {
+        // Unique identifier for the application
+        applicationId "com.example.giftapp_public"
+
+        // Minimum Android version supported
+        minSdk 24
+
+        // Target Android version
+        targetSdk 35
+
+        // Internal app version code (used by Play Store)
+        versionCode 1
+
+        // Human-readable version name
+        versionName "1.0"
+
+        // Instrumentation runner for UI tests
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            // Whether to enable code shrinking & obfuscation
+            minifyEnabled false
+
+            // ProGuard configuration files
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        // Java language compatibility
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        // Enable ViewBinding for easier access to UI elements
+        viewBinding true
+    }
+}
+
+dependencies {
+    // Google Material Design components (UI elements, themes, etc.)
+    implementation 'com.google.android.material:material:1.8.0'
+
+    // ViewPager2 for swiping between fragments
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // AndroidX support libraries
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+
+    // Android Jetpack Navigation components
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+
+    // Unit testing libraries
+    testImplementation libs.junit
+
+    // Android Instrumented testing libraries
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}

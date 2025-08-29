@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Splash Screen Layout
+  Public-Friendly Notes:
+  - ConstraintLayout is used to easily position VideoView and Skip Button.
+  - VideoView plays the intro video (e.g., birthday video).
+  - Skip Button allows users to skip the video.
+  - Background is black to mimic a cinema-like experience.
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#000000"> <!-- Black background for cinematic feel -->
+
+    <!-- Video container
+    Maintain 16:9 aspect ratio -->
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Skip button
+     Customize the text for public usage
+     Custom drawable for button style
+     Warning ignore for public-friendly tips -->
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✦ Atla"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/skip_button_bg"
+        android:elevation="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Skip Button Background Drawable
+  Public-Friendly Notes:
+  - shape is set to rectangle for button background.
+  - solid color is semi-transparent black (#66000000) to overlay nicely on any video.
+  - corners are rounded with 20dp radius for a modern look.
+  - This drawable can be applied as background to buttons for visual appeal.
+-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Semi-transparent black fill -->
+    <solid android:color="#66000000"/>
+
+    <!-- Rounded corners for modern button style -->
+    <corners android:radius="20dp"/>
+</shape>
