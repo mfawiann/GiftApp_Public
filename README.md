@@ -103,8 +103,3 @@ This project is released under the **MIT License** – see `LICENSE` for details
 ---
 
 Made with ❤️ for interactive birthday experiences.
-
-
-
-Bunu yapayım mı?
-```
